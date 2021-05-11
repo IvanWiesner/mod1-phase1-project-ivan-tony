@@ -6,35 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     
-    <title>First Project</title>
+    <title>Mediterranean Cuisine</title>
     
 </head>
 <body>
     <div id="navbar">
-    <h1>Mediterranean</h1>
-    <img src="logo.png" id="logo">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="asian.html">Asain</a></li>
-        <li><a href="italian.html">Italian</a></li>
-        <li><a href="mediterranean.html">Mediterranean</a></li>
-        <li><a href="mexican.html">Mexican</a></li>
-      </ul>
+        <img src="logo.png" id="logo">
+        <h1>🫒 Mediterranean Recipies</h1>
+        <button class="menu-button active">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="asian.html">Asain</a></li>
+                <li class="nav-item"><a class="nav-link" href="italian.html">Italian</a></li>
+                <li class="nav-item"><a class="nav-link" href="mediterranean.html">Mediterranean</a></li>
+                <li class="nav-item"><a class="nav-link" href="mexican.html">Mexican</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <div id="med">
+    <div id="med" class="card-div">
         
     </div>
 
-    <footer>
+    <div id="comment-section">
+        <form class="comment-form">
+            <input class="comment-input" type="text" name="comment" placeholder="Add a comment..." />
+            <button class="comment-button" type="submit">Post</button>
+        </form>
         <ol>
             <li>This recipe is great!</li>
             <li>I liked the duck one!</li>
             <li>Try adding some more red chili flakes to the chiken for some more spice.</li>
             <li>cook time may vary depending on induction stove versus convection.</li>
         </ol>
-        </footer>
+    </div>
+
+    <footer>
+        <h2>Chef Contributions</h2>
+        <p>text about chef</p>
+        <img src="">
+    </footer>
     
 </body>
     <script src="med.js"></script>
+    <script src="app.js"></script>
 </html>

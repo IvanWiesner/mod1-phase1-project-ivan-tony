@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>First Project</title>
-    
+
 </head>
+
 <body>
     <div id="navbar">
-    <h1>Cullinary Choices</h1>
-    <img src="logo.png" id="logo">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="asian.html">Asain</a></li>
-        <li><a href="italian.html">Italian</a></li>
-        <li><a href="mediterranean.html">Mediterranean</a></li>
-        <li><a href="mexican.html">Mexican</a></li>
-      </ul>
+        <img src="logo.png" id="logo">
+        <h1>Cullinary Choices</h1>
+        <button class="menu-button active">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="asian.html">Asain</a></li>
+                <li class="nav-item"><a class="nav-link" href="italian.html">Italian</a></li>
+                <li class="nav-item"><a class="nav-link" href="mediterranean.html">Mediterranean</a></li>
+                <li class="nav-item"><a class="nav-link" href="mexican.html">Mexican</a></li>
+            </ul>
+        </nav>
     </div>
 
     <div id="home-page">
@@ -54,8 +63,9 @@
         <p>text about chef</p>
         <img src="">
     </footer>
-    
+
 
 </body>
-    <script src="app.js"></script>
+<script src="app.js"></script>
+
 </html>

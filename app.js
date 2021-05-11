@@ -102,3 +102,17 @@
 
 // //         mexicanDiv.append(title, picture, likesButton, unlikesButton)
 // //     })})
+
+
+
+
+const menuButton = document.querySelector('.menu-button');
+const navMenu = document.querySelector('.nav-menu');
+
+menuButton.addEventListener('click', toggleActive);
+
+function toggleActive(event) {
+    event.preventDefault();
+    navMenu.classList.toggle('active')
+    menuButton.classList.toggle('active');
+}

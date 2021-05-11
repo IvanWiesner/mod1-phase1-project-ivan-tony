@@ -4,35 +4,148 @@
     box-sizing: border-box;
   }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 h1 {
-    color: red;
-    font-size: 8rem; 
+    color: #dbd8c7;
+    font-size: 5rem;
 }
 
 #navbar {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
-    background-color: blue;
-
+    background-color: #92a831;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
 }
+
+ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+.nav-menu {
+    visibility: hidden;
+}
+
+.nav-menu.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2e2d2d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: visible;
+    width: 10rem;
+    height: 100%;
+}
+
+.menu-button {
+    width: 4rem;
+    height: 3rem;
+    visibility: hidden;
+    position: right;
+    padding: 0;
+}
+
+.menu-button.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: unset;
+    background: transparent;
+    height: 3rem;
+    visibility: visible;
+}
+
+.menu-line {
+    background: #dbd8c7;
+    border: .5px solid #dbd8c7;
+    height: 5px;
+    width: 100%;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f0de3b;
+}
+
+#logo {
+    border-radius: 50%;
+}
+
 a {
     color:black;
 }
+
 .thumbsup, .thumbsdown {
     height: 8vh;
     width: 5vw;
 }
-#asian {
-    padding: 0 0 0 2vw;
-}
-#navbar img {
 
+#navbar img {
+    padding: .5rem;
 }
 
 #navbar h1 {
-
+    position: static;
+    padding: 0 1.5rem 0 1.5rem;
+    margin: 3rem;
 }
 
-#navbar ul {
-    
+#home-page {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding-top: 2rem;
+}
+
+.card-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 2rem 5rem 10rem 5rem;
+}
+
+#comment-section {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding-bottom: 5vw;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 5rem 1.5rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    position: absolute;
+    background-color: #63bdc0;
+    width: 100vw;
 }
