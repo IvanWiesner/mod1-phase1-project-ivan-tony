@@ -6,14 +6,25 @@
 
 h1 {
     color: red;
+    font-size: 8rem; 
 }
 
 #navbar {
     display: flex;
     flex-direction: row;
     background-color: blue;
-}
 
+}
+a {
+    color:black;
+}
+.thumbsup, .thumbsdown {
+    height: 8vh;
+    width: 5vw;
+}
+#asian {
+    padding: 0 0 0 2vw;
+}
 #navbar img {
 
 }

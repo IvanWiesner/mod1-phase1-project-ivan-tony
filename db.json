@@ -1,166 +1,152 @@
 {
-    
-
-        "Asian": [
-
-            {
-                "title": "fruit",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 1
-            },
-
-            {
-                "title": "Chicken",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 2
-            },
-            {
-                "title": "Beef",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 3
-            },
-            {
-                "title": "Lamb",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 4
-            }
-
-        ],
-
-        "Italian": [
-
-            {
-                "title": "Fish",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 1
-            },
-
-            {
-                "title": "Chicken",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 2
-            },
-            {
-                "title": "Beef",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 3
-            },
-            {
-                "title": "Lamb",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 4
-            }
-
-        ],
-
-        "Mediterranean": [
-
-            {
-                "title": "banana",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 1
-            },
-
-            {
-                "title": "Chicken",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 2
-            },
-            {
-                "title": "Beef",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 3
-            },
-            {
-                "title": "Lamb",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 4
-            }
-
-        ],
-
-        "Mexican": [
-
-            {
-                "title": "apple",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 1
-            },
-
-            {
-                "title": "Chicken",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 2
-            },
-            {
-                "title": "Beef",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 3
-            },
-            {
-                "title": "Lamb",
-                "picture": "",
-                "likes": "0",
-                "unlikes": "0",
-                "id": 4
-            }
-
-        ],
-
-    "recipe": [{
-            "title": "",
-            "ingredients": "",
-            "comments": "",
-            "id": 1
-        },
-        {
-            "title": "",
-            "ingredients": "",
-            "comments": "",
-            "id": 2
-        },
-        {
-            "title": "",
-            "ingredients": "",
-            "comments": "",
-            "id": 3
-        },
-
-        {
-            "title": "",
-            "ingredients": "",
-            "comments": "",
-            "id": 4
-        }
-    ]
+  "Asian": [
+    {
+      "title": "fruit",
+      "picture": "",
+      "recipe": "text for recipe",
+      "likes": 0,
+      "unlikes": 0,
+      "id": 1
+    },
+    {
+      "title": "Chicken",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 2
+    },
+    {
+      "title": "Beef",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 3
+    },
+    {
+      "title": "Lamb",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 4
+    }
+  ],
+  "Italian": [
+    {
+      "title": "Fish",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 1
+    },
+    {
+      "title": "Chicken",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 2
+    },
+    {
+      "title": "Beef",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 3
+    },
+    {
+      "title": "Lamb",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 4
+    }
+  ],
+  "Mediterranean": [
+    {
+      "title": "banana",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 1
+    },
+    {
+      "title": "Chicken",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 2
+    },
+    {
+      "title": "Beef",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 3
+    },
+    {
+      "title": "Lamb",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 4
+    }
+  ],
+  "Mexican": [
+    {
+      "title": "apple",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 1
+    },
+    {
+      "title": "Chicken",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 2
+    },
+    {
+      "title": "Beef",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 3
+    },
+    {
+      "title": "Lamb",
+      "picture": "",
+      "recipe": "",
+      "likes": "0",
+      "unlikes": "0",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "content": "",
+      "id": 1
+    },
+    {
+      "conent": "",
+      "id": 2
+    },
+    {
+      "content": "",
+      "id": 3
+    }
+  ]
 }

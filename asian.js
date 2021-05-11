@@ -1,98 +1,104 @@
 const asianURL = 'http://localhost:3000/Asian/'
+const commentsURL = 'http://localhost:3000/comments/'
 const asianDiv = document.getElementById('asian')
+const commentsOl = document.querySelector('ol')
 
 fetch(asianURL)
     .then(response => response.json())
-    .then(asianReciepes => {
-        asianReciepes.forEach(asianRecipe => {
+    .then(recipes => {
+    console.log(asianURL)
+        recipes.forEach(recipe => {
 
-        const asianTitle = document.createElement('h2')
-        asianTitle.innerText = asianRecipe.title
-        
-        const asianPicture = document.createElement('img')
-        asianPicture.src = asianRecipe.picture
+        const recipeText = document.createElement('p')
+        recipeText.innerText = recipe.recipe
 
-        const asianLikesButton = document.createElement('button')
+        const title = document.createElement('h2')
+        title.innerText = recipe.title
 
-        const asianLikes = document.createElement('p')
-        asianLikes.innerText = asianRecipe.likes
 
-        const asianUnlikesButton = document.createElement('button')
+        const likesPic = document.createElement('img')
+        likesPic.className = ('thumbsup')
+        likesPic.src = './thumbs-up.png'
 
-        const asianUnLikes = document.createElement('p')
-        asianUnLikes.innerText = asianRecipe.unlikes
+        const picture = document.createElement('img')
+        picture.src = recipe.picture
 
-        asianDiv.append(asianTitle, asianPicture, asianLikes, asianUnLikes, asianLikesButton, asianUnlikesButton)
+        const likesButton = document.createElement('button')
+        likesButton.append(likesPic)
+        likesButton.addEventListener('click', () => {
+            const oldLikes = parseInt(likes.innerText)
+            const addLikes = oldLikes + 1 
+            likes.innerText = `${addLikes} likes`;
+            const options = {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    likes: addLikes
+                })
+            }
+        fetch(asianURL + recipe.id, options)   
+        });
+
+
+        const likes = document.createElement('p')
+        likes.innerText = recipe.likes
+
+        const unLikesPic = document.createElement('img')
+        unLikesPic.src = './thumbs-down.png'
+        unLikesPic.className = ('thumbsdown')
+
+
+        const unLikes = document.createElement('p')
+        unLikes.innerText = recipe.unlikes
+
+        const unlikesButton = document.createElement('button')
+        unlikesButton.append(unLikesPic)
+        unlikesButton.addEventListener('click', () => {
+            const oldUnLikes = parseInt(unLikes.innerText)
+            const addUnLikes = oldUnLikes + 1
+            unLikes.innerText = `${addUnLikes} unlikes`;
+            const option = {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    unlikes : addUnLikes
+                })
+            }
+        fetch(asianURL + recipe.id, option)
+        });
+        asianDiv.append(title, picture, recipeText, likes, unLikes, likesButton, unlikesButton)
     })})
-    
-// fetch(italianURL)
-//     .then(response => response.json())
-//     .then(italianReciepes => {
-//         italianReciepes.forEach(recipe => {
-
-//         const title = document.createElement('h2')
-//         title.innerText = recipe.title
-        
-//         const picture = document.createElement('img')
-//         picture.src = recipe.picture
-
-//         const likesButton = document.createElement('button')
-
-//         const likes = document.createElement('p')
-//         likes.innerText = recipe.likes
-
-//         const unlikesButton = document.createElement('button')
-
-//         const unLikes = document.createElement('p')
-//         unLikes.innerText = recipe.unLikes
-
-//         italianDiv.append(title, picture, likesButton, unlikesButton)
-//     })})
-
-// fetch(medURL)
-//     .then(response => response.json())
-//     .then(medReciepes => {
-//         medReciepes.forEach(recipe => {
-
-//         const title = document.createElement('h2')
-//         title.innerText = recipe.title
-        
-//         const picture = document.createElement('img')
-//         picture.src = recipe.picture
-
-//         const likesButton = document.createElement('button')
-
-//         const likes = document.createElement('p')
-//         likes.innerText = recipe.likes
-
-//         const unlikesButton = document.createElement('button')
-
-//         const unLikes = document.createElement('p')
-//         unLikes.innerText = recipe.unLikes
-
-//         medDiv.append(title, picture, likesButton, unlikesButton)
-//     })})
-
-// fetch(mexicanURL)
-//     .then(response => response.json())
-//     .then(mexicanReciepes => {
-//         mexicanReciepes.forEach(recipe => {
-
-//         const title = document.createElement('h2')
-//         title.innerText = recipe.title
-        
-//         const picture = document.createElement('img')
-//         picture.src = recipe.picture
-
-//         const likesButton = document.createElement('button')
-
-//         const likes = document.createElement('p')
-//         likes.innerText = recipe.likes
-
-//         const unlikesButton = document.createElement('button')
-
-//         const unLikes = document.createElement('p')
-//         unLikes.innerText = recipe.unLikes
-
-//         mexicanDiv.append(title, picture, likesButton, unlikesButton)
-//     })})
+    const newComments = (comment) => {
+        const commentsLi = document.createElement('li')
+        commentsLi.innerText = comment.content
+        commnentsOl.append(commentsLi)
+    }
+    const form = document.querySelector('.comment-form')
+    const textInput = document.querySelector('.comment-input')
+    form.addEventListener('submit', (event) => {
+    event.preventDefault();
+        const displayText = textInput.value
+        const comment = {
+            content: displayText
+        }
+    const newLi = document.createElement('li')
+    newLi.innerText = displayText
+    commentsOl.append(newLi)
+    form.reset()
+    console.log(comment)
+    fetch(commentsURL, {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(comment)},
+    )
+    })
+ 
