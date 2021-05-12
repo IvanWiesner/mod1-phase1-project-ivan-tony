@@ -15,8 +15,9 @@ body {
 }
 
 h1 {
-    color: #dbd8c7;
+    color: #e4daa3;
     font-size: 4rem;
+    text-shadow: .25rem .5rem .25rem #1a181866;
 }
 
 #navbar {
@@ -30,6 +31,18 @@ h1 {
     box-shadow: 0 8px 6px -6px #5a5a5a;
 }
 
+.button {
+    color: #f0de3b;
+    background-color: red;
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    align-items: center;
+}
+
 ul li::before {
     content: "\2022";
     /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -41,7 +54,7 @@ ul li::before {
     /* Needed to add space between the bullet and the text */
     width: 1em;
     /* Also needed for space (tweak if needed) */
-    margin-left: -1em;
+    margin-left: 1em;
     /* Also needed for space (tweak if needed) */
 }
 
@@ -51,6 +64,7 @@ ul li::before {
 
 .nav-menu.active {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #2e2d2d;
@@ -99,6 +113,10 @@ ul li::before {
 
 #logo {
     border-radius: 50%;
+}
+
+#logo:hover {
+    transform: rotate(360deg);
 }
 
 a {
@@ -162,7 +180,8 @@ a {
     display: flex;
     align-items: center;
     flex-flow: column;
-    padding-bottom: 2.5vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: #92a831;
 }
 

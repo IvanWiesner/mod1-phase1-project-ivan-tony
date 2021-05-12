@@ -105,11 +105,12 @@
 
 
 
-
+const buttonToggle = document.querySelector('.button')
 const menuButton = document.querySelector('.menu-button');
 const navMenu = document.querySelector('.nav-menu');
 
 menuButton.addEventListener('click', toggleActive);
+buttonToggle.addEventListener('click', toggleActive);
 
 function toggleActive(event) {
     event.preventDefault();
