@@ -18,9 +18,11 @@ h1 {
     color: #e4daa3;
     font-size: 4rem;
     text-shadow: .25rem .5rem .25rem #1a181866;
+    position: absolute;
 }
 
 #navbar {
+    border-radius: 0 0 .5rem .5rem;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -81,8 +83,10 @@ ul li::before {
     width: 4rem;
     height: 3rem;
     visibility: hidden;
-    position: right;
+    position: absolute;
+    right: 0;
     padding: 0;
+    margin-right: 2rem;
 }
 
 .menu-button.active {
@@ -113,9 +117,14 @@ ul li::before {
 
 #logo {
     border-radius: 50%;
+    position: relative;
+    left: 0;
+    margin-left: 2rem;
+    transition: 0.70s;
 }
 
 #logo:hover {
+    transition: 0.70s;
     transform: rotate(360deg);
 }
 
@@ -183,6 +192,7 @@ a {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #92a831;
+    border-radius: .25rem .25rem 0 0;
 }
 
 .card {
