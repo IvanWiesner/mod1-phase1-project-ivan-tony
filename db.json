@@ -1,7 +1,8 @@
 {
-  "Asian": [{
+  "Asian": [
+    {
       "title": "Friend Pork Belly",
-      "picture": "",
+      "picture": "http://www.bearnakedfood.com/wp-content/uploads/2018/06/DSCF2306.jpg",
       "prep-time": "20-30 minutes",
       "ingredients": [
         "2 quarts oil for frying, or as needed",
@@ -14,8 +15,8 @@
     },
     {
       "title": "Spicy Thai Squid With Chiles and Cilantro",
-      "picture": "",
-      "prep-time": "",
+      "picture": "https://static01.nyt.com/images/2013/12/18/dining/18JPAPPE4/18JPAPPE4-articleLarge.jpg",
+      "prep-time": "15 minutes",
       "ingredients": [
         "1 pound cleaned squid",
         "2 tablespoons peanut oil",
@@ -35,7 +36,7 @@
     },
     {
       "title": "Chinese Orange Chicken",
-      "picture": "",
+      "picture": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3864686.jpg&q=85",
       "prep-time": "15 minutes",
       "ingredients": [
         "4 Boneless Skinless Chicken Breasts cut into bite-size pieces",
@@ -60,7 +61,7 @@
     },
     {
       "title": "Beef and Broccoli",
-      "picture": "",
+      "picture": "https://www.dinneratthezoo.com/wp-content/uploads/2017/10/beef-and-broccoli-stir-fry-14-500x500.jpg",
       "prep-time": "less than 20 minutes",
       "ingredients": [
         "3 Tablespoons cornstarch, divided",
@@ -79,9 +80,10 @@
       "id": 4
     }
   ],
-  "Italian": [{
+  "Italian": [
+    {
       "title": "Thick Italian Hot Chocolate",
-      "picture": "",
+      "picture": "https://i.ytimg.com/vi/ZGt0pJ0BEHM/maxresdefault.jpg",
       "prep-time": "20 minutes",
       "ingredients": [
         "3.5 ounces Dark Chocolate",
@@ -91,13 +93,13 @@
         "1 teaspoon corn starch"
       ],
       "recipe": "In a small bowl whisk until smooth, 1/4 cup milk and cornstarch set aside.Sift the cocoa into a medium bowl then add the sugar and whisk together, set aside.In a small/medium pot heat 3/4 cups + 1 tablespoon milk until boiling reduce heat to low, start whisking and add the milk/cornstarch mixture then add the cocoa mixture slowly while continually whisking until smooth add the chopped chocolate and whisk for approximately 3 minutes. Serve immediately. Enjoy!",
-      "likes": "0",
-      "unlikes": "0",
+      "likes": 2,
+      "unlikes": 2,
       "id": 1
     },
     {
       "title": "Caprese Chicken with Smashed Potatoes",
-      "picture": "",
+      "picture": "https://pinchofyum.com/wp-content/uploads/Caprese-Chicken-2-Square.jpg",
       "prep-time": "1 hour",
       "ingredients": [
         "10–12 small red or gold potatoes",
@@ -117,7 +119,7 @@
     },
     {
       "title": "Tuscan Chicken",
-      "picture": "",
+      "picture": "https://juliasalbum.com/wp-content/uploads/2019/11/creamy-tuscan-chicken-1-500x500.jpg",
       "prep-time": "30 minutes",
       "ingredients": [
         "2 tablespoons olive oil",
@@ -138,7 +140,7 @@
     },
     {
       "title": "Neapolitan Pizza Recipe",
-      "picture": "",
+      "picture": "https://www.italymagazine.com/sites/default/files/feature-story/leader/pizza-margherita-napoletana.jpg",
       "prep-time": "1 hour",
       "ingredients": [
         "1 ball Best Homemade Pizza Dough",
@@ -154,9 +156,10 @@
       "id": 4
     }
   ],
-  "Mediterranean": [{
+  "Mediterranean": [
+    {
       "title": "Baked Lemon Garlic Salmon Recipe",
-      "picture": "",
+      "picture": "https://www.cakenknife.com/wp-content/uploads/2020/01/Baked-Lemon-Garlic-Salmon_thumbnail-1-480x480.jpg",
       "prep-time": "30 minutes",
       "ingredients": [
         "2 lb salmon fillet",
@@ -172,7 +175,7 @@
     },
     {
       "title": "Chicken Shawarma",
-      "picture": "",
+      "picture": "https://hips.hearstapps.com/vidthumb/images/190130-chicken-shwarma-horizontal-1551285400.png",
       "prep-time": "40 minutes",
       "ingredients": [
         "8 boneless, skinless chicken thighs",
@@ -192,8 +195,8 @@
     },
     {
       "title": "Lemon Garlic Baked Chicken Drumsticks",
-      "picture": "",
-      "prep-time": "",
+      "picture": "https://wonkywonderful.com/wp-content/uploads/2018/01/garlic-lemon-chicken-drumsticks-3.jpg",
+      "prep-time": "35 minutes",
       "ingredients": [
         "10 to 12 chicken drumsticks bone in, skin on",
         "1 tbsp black pepper and kosher salt",
@@ -211,7 +214,7 @@
     },
     {
       "title": "Mediterranean Garlic Shrimp Pasta Recipe",
-      "picture": "",
+      "picture": "https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Mediterranean-Shrimp-Linguine_exps120872_SD2232457C08_26_3bC_RMS.jpg",
       "prep-time": "20 minutes",
       "ingredients": [
         "¾ lb thin spaghetti",
@@ -232,9 +235,10 @@
       "id": 4
     }
   ],
-  "Mexican": [{
+  "Mexican": [
+    {
       "title": "Crab tostadas",
-      "picture": "",
+      "picture": "https://3f4c2184e060ce99111b-f8c0985c8cb63a71df5cb7fd729edcab.ssl.cf2.rackcdn.com/media/13879/crabtostadas.jpg",
       "prep-time": "50 minutes",
       "ingredients": [
         "guajillo or chipotle powder 1 tsp, tamarind paste 1 tbsp, lime ½, juiced",
@@ -253,8 +257,8 @@
     },
     {
       "title": "Chicken enchiladas",
-      "picture": "",
-      "prep-time": "",
+      "picture": "https://www.jessicagavin.com/wp-content/uploads/2018/04/chicken-enchiladas-5-1200.jpg",
+      "prep-time": "20 minutes",
       "ingredients": [
         "chicken breasts 2, cut into thin slices",
         "vegetable oil 2 tsp",
@@ -277,8 +281,8 @@
     },
     {
       "title": "Tacos al pastor",
-      "picture": "1 hour+",
-      "prep-time": "",
+      "picture": "https://cdn.kiwilimon.com/recetaimagen/13996/6330.jpg",
+      "prep-time": "1 hour+",
       "ingredients": [
         "boneless pork shoulder 1.5kg, skin and large pieces of fat removed, meat cut into ½cm-thick slices",
         "pineapple 1, cut into 1cm slices",
@@ -297,7 +301,7 @@
     },
     {
       "title": "Spicy Mexican rice",
-      "picture": "",
+      "picture": "https://images.immediate.co.uk/production/volatile/sites/2/2020/06/Steven-Joyce-JOS2020026D00012-FS_preview-7786183.jpg?quality=90&resize=768,574",
       "prep-time": "30 minutes",
       "ingredients": [
         "groundnut oil 1 tbsp",
@@ -318,7 +322,8 @@
       "id": 4
     }
   ],
-  "comments": [{
+  "comments": [
+    {
       "content": "",
       "id": 1
     },
@@ -329,6 +334,14 @@
     {
       "content": "",
       "id": 3
+    },
+    {
+      "content": "yummmm",
+      "id": 4
+    },
+    {
+      "content": "ok",
+      "id": 5
     }
   ]
 }

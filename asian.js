@@ -49,6 +49,11 @@ fetch(asianURL)
                 fetch(asianURL + recipe.id, options)
             });
 
+            const likesButtonElement = document.createElement('div')
+            likesButtonElement.className = 'likes-button-element'
+
+            const likesElement = document.createElement('div')
+            likesElement.className = 'likes-element'
 
             const likes = document.createElement('p')
             likes.className = 'recipe-likes'
@@ -82,14 +87,17 @@ fetch(asianURL)
                 }
                 fetch(asianURL + recipe.id, option)
             });
-            cardElement.append(title, picture, recipeText, likes, unLikes, likesButton, unlikesButton)
+            likesElement.append(likes, unLikes)
+            likesButtonElement.append(likesButton, unlikesButton)
+            cardElement.append(title, picture, recipeText, likesElement, likesButtonElement)
             asianDiv.append(cardElement)
         })
     })
+    
 const newComments = (comment) => {
     const commentsLi = document.createElement('li')
     commentsLi.innerText = comment.content
-    commnentsOl.append(commentsLi)
+    commentsOl.append(commentsLi)
 }
 const form = document.querySelector('.comment-form')
 const textInput = document.querySelector('.comment-input')

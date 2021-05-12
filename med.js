@@ -1,5 +1,6 @@
 const medURL = 'http://localhost:3000/Mediterranean/'
 const medDiv = document.getElementById('med')
+const commentsOl = document.querySelector('ol')
 
 
 fetch(medURL)
@@ -34,7 +35,7 @@ fetch(medURL)
             likesButton.addEventListener('click', () => {
                 const oldLikes = parseInt(likes.innerText)
                 const addLikes = oldLikes + 1
-                likes.innerText = `${addLikes} likes`;
+                likes.innerText = `${addLikes} Likes`;
                 const options = {
                     method: 'PATCH',
                     headers: {
@@ -48,10 +49,15 @@ fetch(medURL)
                 fetch(medURL + recipe.id, options)
             });
 
+            const likesButtonElement = document.createElement('div')
+            likesButtonElement.className = 'likes-element'
+
+            const likesElement = document.createElement('div')
+            likesElement.className = 'likes-element'
 
             const likes = document.createElement('p')
             likes.className = 'recipe-likes'
-            likes.innerText = recipe.likes
+            likes.innerText = recipe.likes + ' Likes'
 
             const unLikesPic = document.createElement('img')
             unLikesPic.src = './thumbs-down.png'
@@ -60,7 +66,7 @@ fetch(medURL)
 
             const unLikes = document.createElement('p')
             unLikes.className = 'recipe-dislikes'
-            unLikes.innerText = recipe.unlikes
+            unLikes.innerText = recipe.unlikes + ' Dislikes'
 
             const unlikesButton = document.createElement('button')
             unlikesButton.className = 'recipe-unlikes-button'
@@ -68,7 +74,7 @@ fetch(medURL)
             unlikesButton.addEventListener('click', () => {
                 const oldUnLikes = parseInt(unLikes.innerText)
                 const addUnLikes = oldUnLikes + 1
-                unLikes.innerText = `${addUnLikes} unlikes`;
+                unLikes.innerText = `${addUnLikes} Dislikes`;
                 const option = {
                     method: 'PATCH',
                     headers: {
@@ -81,7 +87,9 @@ fetch(medURL)
                 }
                 fetch(medURL + recipe.id, option)
             });
-            cardElement.append(title, picture, recipeText, likes, unLikes, likesButton, unlikesButton)
+            likesElement.append(likes, unLikes)
+            likesButtonElement.append(likesButton, unlikesButton)
+            cardElement.append(title, picture, recipeText, likesElement, likesButtonElement)
             medDiv.append(cardElement)
         })
     })
@@ -89,7 +97,7 @@ fetch(medURL)
 const newComments = (comment) => {
     const commentsLi = document.createElement('li')
     commentsLi.innerText = comment.content
-    commnentsOl.append(commentsLi)
+    commentsOl.append(commentsLi)
 }
 const form = document.querySelector('.comment-form')
 const textInput = document.querySelector('.comment-input')
