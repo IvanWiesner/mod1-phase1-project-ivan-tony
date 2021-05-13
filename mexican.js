@@ -5,7 +5,6 @@ const commentsOl = document.querySelector('ol')
 fetch(mexicanURL)
     .then(response => response.json())
     .then(recipes => {
-
         recipes.forEach(recipe => {
 
             const cardElement = document.createElement('div')
