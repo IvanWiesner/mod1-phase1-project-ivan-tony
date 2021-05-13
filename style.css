@@ -18,17 +18,18 @@ h1 {
     color: #e4daa3;
     font-size: 4rem;
     text-shadow: .25rem .5rem .25rem #1a181866;
-    position: absolute;
+    padding: 0 1.5rem 0 1.5rem;
+    margin: 3rem;
 }
 
 #navbar {
     border-radius: 0 0 .5rem .5rem;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     background-color: #92a831;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100vw;
     box-shadow: 0 8px 6px -6px #5a5a5a;
 }
@@ -119,8 +120,8 @@ ul li::before {
     border-radius: 50%;
     position: relative;
     left: 0;
-    margin-left: 2rem;
     transition: 0.70s;
+    height: 8rem;
 }
 
 #logo:hover {
@@ -164,19 +165,22 @@ a {
     padding: .5rem;
 }
 
-#navbar h1 {
-    position: static;
-    padding: 0 1.5rem 0 1.5rem;
-    margin: 3rem;
-}
-
 #home-page {
     display: flex;
     align-items: center;
-    flex-flow: column;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-    height: 100vh;
+    flex-flow: column nowrap;
+    margin: 2rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    background-color: brown;
+    background-image:
+    radial-gradient(
+      circle at top left,
+      #63bdc0,
+      #acbebe,
+      #92a831 50%
+    );
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 2rem;
 }
 
 .card-div {
@@ -189,10 +193,76 @@ a {
     display: flex;
     align-items: center;
     flex-flow: column;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #92a831;
-    border-radius: .25rem .25rem 0 0;
+    padding-left: 2rem;
+    background-color: #d8e69a;
+    border-radius: .25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 8rem;
+    position: relative;
+    box-shadow: inset .1rem .1rem .5rem .1rem #000000;
+}
+
+#comment-section::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+#comment-section::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+#comment-section::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+#comment-section::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #3e3f37;
+}
+
+.comment-input {
+    padding: .5rem;
+}
+
+.comment-button {
+    background-color: #3e3f37;
+    color:#92a831;
+    font-weight: bold;
+    margin: .5rem;
+    width: 5rem;
+    height: 3rem;
+}
+
+.list-items {
+    margin: .5rem;
+}
+
+.video-div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#shef-picture {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 2rem;
+    background-color: brown;
+    background-image:
+    radial-gradient(
+      circle at center,
+      #232929,
+      #6e6e6e,
+      #3e3f37 50%
+    );
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 2rem;
 }
 
 .card {
@@ -200,7 +270,7 @@ a {
     align-items: center;
     flex-flow: column nowrap;
     margin: 5rem;
-    padding: 5rem 1.5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
     background-color: brown;
     background-image:
     radial-gradient(

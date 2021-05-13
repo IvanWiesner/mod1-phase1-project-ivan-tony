@@ -29,6 +29,54 @@ fetch(medURL)
             picture.className = 'recipe-image'
             picture.src = recipe.picture
 
+            const formDiv = document.createElement('div')
+            formDiv.id = 'comment-section'
+
+            const form = document.createElement('form')
+            form.className = 'comment-form'
+
+            const formInput = document.createElement('input')
+            formInput.className = 'comment-input'
+            formInput.type = 'text'
+            formInput.name = 'comment'
+            formInput.placeholder = 'Tell Us What You Think'
+            
+            const formButton = document.createElement('button')
+            formButton.className = 'comment-button'
+            formButton.type = 'submit'
+            formButton.innerText = 'Post'
+
+            const formList = document.createElement('ol')
+
+            formDiv.append(form, formInput, formButton, formList)
+
+
+            formButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const displayText = formInput.value
+                const comment = {
+                    comment: displayText
+                }
+    
+                fetch(medURL + recipe.id, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(comment)
+                })
+                
+                const newLi = document.createElement('li')
+                newLi.innerText = displayText
+                formList.append(newLi)
+                form.reset()
+            })
+
+            const commentsLi = document.createElement('li')
+            commentsLi.innerText = recipe.comment
+            formList.append(commentsLi)
+
             const likesButton = document.createElement('button')
             likesButton.className = 'recipe-likes-button'
             likesButton.append(likesPic)
@@ -50,7 +98,7 @@ fetch(medURL)
             });
 
             const likesButtonElement = document.createElement('div')
-            likesButtonElement.className = 'likes-element'
+            likesButtonElement.className = 'likes-button-element'
 
             const likesElement = document.createElement('div')
             likesElement.className = 'likes-element'
@@ -89,35 +137,7 @@ fetch(medURL)
             });
             likesElement.append(likes, unLikes)
             likesButtonElement.append(likesButton, unlikesButton)
-            cardElement.append(title, picture, recipeText, likesElement, likesButtonElement)
+            cardElement.append(title, picture, recipeText, likesElement, likesButtonElement, formDiv)
             medDiv.append(cardElement)
         })
     })
-
-const newComments = (comment) => {
-    const commentsLi = document.createElement('li')
-    commentsLi.innerText = comment.content
-    commentsOl.append(commentsLi)
-}
-const form = document.querySelector('.comment-form')
-const textInput = document.querySelector('.comment-input')
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const displayText = textInput.value
-    const comment = {
-        content: displayText
-    }
-    const newLi = document.createElement('li')
-    newLi.innerText = displayText
-    commentsOl.append(newLi)
-    form.reset()
-    console.log(comment)
-    fetch(commentsURL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(comment)
-    }, )
-})

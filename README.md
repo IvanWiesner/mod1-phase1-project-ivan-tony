@@ -34,7 +34,7 @@ Setup
 
 fork and clone the repo
 type this into your terminal
-json-setup --watch db.json
+json-server --watch db.json --routes routes.json
 
 Code Language used
 -HTML

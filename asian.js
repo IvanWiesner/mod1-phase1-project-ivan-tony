@@ -1,13 +1,33 @@
 const asianURL = 'http://localhost:3000/Asian/'
 const commentsURL = 'http://localhost:3000/comments/'
 const asianDiv = document.getElementById('asian')
-const commentsOl = document.querySelector('ol')
+
+
 
 fetch(asianURL)
     .then(response => response.json())
     .then(recipes => {
+        console.log('recipes', recipes)
 
         recipes.forEach(recipe => {
+
+            const formDiv = document.createElement('div')
+            formDiv.id = 'comment-section'
+
+            const form = document.createElement('form')
+            form.className = 'comment-form'
+
+            const formInput = document.createElement('input')
+            formInput.className = 'comment-input'
+            formInput.type = 'text'
+            formInput.name = 'comment'
+            formInput.placeholder = 'Tell Us What You Think'
+
+            const formButton = document.createElement('button')
+            formButton.className = 'comment-button'
+            formButton.type = 'submit'
+            formButton.innerText = 'Post'
+
 
             const cardElement = document.createElement('div')
             cardElement.className = 'card'
@@ -89,35 +109,40 @@ fetch(asianURL)
             });
             likesElement.append(likes, unLikes)
             likesButtonElement.append(likesButton, unlikesButton)
-            cardElement.append(title, picture, recipeText, likesElement, likesButtonElement)
+
+
+            formButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const newComment = formInput.value
+                const comment = {
+                    content: newComment,
+                    AsianId: recipe.id
+                }
+
+                fetch(commentsURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(comment)
+                })
+
+                const newLi = document.createElement('li')
+                newLi.className = 'list-items'
+                newLi.innerText = newComment
+                formList.append(newLi)
+
+            })
+
+            const formList = document.createElement('ol')
+
+            formDiv.append(form, formInput, formButton, formList)
+
+            const commentsLi = document.createElement('li')
+            commentsLi.innerText = recipe.comments
+            formList.append(commentsLi)
+            cardElement.append(title, picture, recipeText, likesElement, likesButtonElement, formDiv)
             asianDiv.append(cardElement)
         })
     })
-    
-const newComments = (comment) => {
-    const commentsLi = document.createElement('li')
-    commentsLi.innerText = comment.content
-    commentsOl.append(commentsLi)
-}
-const form = document.querySelector('.comment-form')
-const textInput = document.querySelector('.comment-input')
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const displayText = textInput.value
-    const comment = {
-        content: displayText
-    }
-    const newLi = document.createElement('li')
-    newLi.innerText = displayText
-    commentsOl.append(newLi)
-    form.reset()
-    console.log(comment)
-    fetch(commentsURL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(comment)
-    }, )
-})

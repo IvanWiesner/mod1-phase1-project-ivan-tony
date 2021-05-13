@@ -1,0 +1,6 @@
+{
+    "/Asian": "/Asian?_embed=comments",
+    "/Italian": "/Italian?_embed=comments",
+    "/Mediterranean": "/Mediterranean?_embed=comments",
+    "/Mexican": "/Mexican?_embed=comments"
+}
