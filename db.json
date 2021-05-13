@@ -9,7 +9,7 @@
         "1 pound pork belly, cut into 1-inch squares"
       ],
       "recipe": "Heat about 4 inches of oil in a deep-fryer or large saucepan to 350 degrees F (175 degrees C). Fry pork belly squares in batches until golden brown, about 5 minutes. Drain on paper towels. Heat about 4 inches of oil in another large saucepan to 425 degrees F (218 degrees C). Fry pork belly squares in batches a second time until skin pops, 30 seconds to 1 minute. Drain on fresh paper towels.",
-      "likes": 18,
+      "likes": 19,
       "unlikes": 2,
       "id": 1
     },
@@ -30,7 +30,7 @@
         "Chopped roasted peanuts, for serving (optional)"
       ],
       "recipe": "Rinse squid under cool running water. Drain and transfer them to a paper towel to dry completely. Cut bodies into 1/2-inch rings and halve tentacles. Place a large skillet over high heat. Let pan get very hot, heating it for a good 5 minutes. Move half the squid from the paper towels to a bowl, so they don’t stick when you slide them into the pan. Add 1 tablespoon oil to skillet. Season squid with salt, slide them into the pan, and cook without moving for 1 minute. Flip squid and cook 30 seconds more. Repeat with remaining squid and oil. Don’t overcrowd the pan; if your skillet doesn’t fit the squid comfortably, cook them in smaller batches. ",
-      "likes": 11,
+      "likes": 12,
       "unlikes": 2,
       "id": 2
     },
@@ -432,6 +432,16 @@
       "content": "this was very good!",
       "AsianId": 1,
       "id": 22
+    },
+    {
+      "content": "Simple directions - yummy outcome!",
+      "AsianId": 1,
+      "id": 23
+    },
+    {
+      "content": "New tradition at our house - family favorite!",
+      "AsianId": 2,
+      "id": 24
     }
   ]
 }
