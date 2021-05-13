@@ -26,7 +26,7 @@ Find recipies for each of the four types we offer.
 <img src="https://i.imgur.com/vJIEZPT.png">
 
 <h2>Intro Video</h2>
---------make video once website done---------
+https://youtu.be/IFBRddqlnAc
 
 <h2>Setup</h2>
 

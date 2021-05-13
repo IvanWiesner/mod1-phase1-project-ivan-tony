@@ -9,8 +9,8 @@
         "1 pound pork belly, cut into 1-inch squares"
       ],
       "recipe": "Heat about 4 inches of oil in a deep-fryer or large saucepan to 350 degrees F (175 degrees C). Fry pork belly squares in batches until golden brown, about 5 minutes. Drain on paper towels. Heat about 4 inches of oil in another large saucepan to 425 degrees F (218 degrees C). Fry pork belly squares in batches a second time until skin pops, 30 seconds to 1 minute. Drain on fresh paper towels.",
-      "likes": 16,
-      "unlikes": "0",
+      "likes": 18,
+      "unlikes": 2,
       "id": 1
     },
     {
@@ -427,6 +427,11 @@
       "content": "Great with tacos",
       "MexicanId": 4,
       "id": 21
+    },
+    {
+      "content": "this was very good!",
+      "AsianId": 1,
+      "id": 22
     }
   ]
 }
