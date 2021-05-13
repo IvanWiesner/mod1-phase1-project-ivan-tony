@@ -1,13 +1,33 @@
-const italianURL = 'http://localhost:3000/Italian/'
+const italianURL = 'http://localhost:3000/italian/'
+const commentsURL = 'http://localhost:3000/comments/'
 const italianDiv = document.getElementById('italian')
-const commentsOl = document.querySelector('ol')
+
 
 
 fetch(italianURL)
     .then(response => response.json())
     .then(recipes => {
+        console.log('recipes', recipes)
 
         recipes.forEach(recipe => {
+
+            const formDiv = document.createElement('div')
+            formDiv.id = 'comment-section'
+
+            const form = document.createElement('form')
+            form.className = 'comment-form'
+
+            const formInput = document.createElement('input')
+            formInput.className = 'comment-input'
+            formInput.type = 'text'
+            formInput.name = 'comment'
+            formInput.placeholder = 'Tell Us What You Think'
+
+            const formButton = document.createElement('button')
+            formButton.className = 'comment-button'
+            formButton.type = 'submit'
+            formButton.innerText = 'Post'
+
 
             const cardElement = document.createElement('div')
             cardElement.className = 'card'
@@ -28,54 +48,6 @@ fetch(italianURL)
             const picture = document.createElement('img')
             picture.className = 'recipe-image'
             picture.src = recipe.picture
-
-            const formDiv = document.createElement('div')
-            formDiv.id = 'comment-section'
-
-            const form = document.createElement('form')
-            form.className = 'comment-form'
-
-            const formInput = document.createElement('input')
-            formInput.className = 'comment-input'
-            formInput.type = 'text'
-            formInput.name = 'comment'
-            formInput.placeholder = 'Tell Us What You Think'
-            
-            const formButton = document.createElement('button')
-            formButton.className = 'comment-button'
-            formButton.type = 'submit'
-            formButton.innerText = 'Post'
-
-            const formList = document.createElement('ol')
-
-            formDiv.append(form, formInput, formButton, formList)
-
-
-            formButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                const displayText = formInput.value
-                const comment = {
-                    comment: displayText
-                }
-    
-                fetch(italianURL + recipe.id, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(comment)
-                })
-                
-                const newLi = document.createElement('li')
-                newLi.innerText = displayText
-                formList.append(newLi)
-                form.reset()
-            })
-
-            const commentsLi = document.createElement('li')
-            commentsLi.innerText = recipe.comment
-            formList.append(commentsLi)
 
             const likesButton = document.createElement('button')
             likesButton.className = 'recipe-likes-button'
@@ -137,6 +109,41 @@ fetch(italianURL)
             });
             likesElement.append(likes, unLikes)
             likesButtonElement.append(likesButton, unlikesButton)
+
+
+            formButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                const newComment = formInput.value
+                const comment = {
+                    content: newComment,
+                    ItalianId: recipe.id
+                }
+
+                console.log(comment)
+                fetch(commentsURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(comment)
+                })
+
+                const newLi = document.createElement('li')
+                newLi.className = 'list-items'
+                newLi.innerText = comment.content
+                formList.append(newLi)
+                formInput.value = ""
+            })
+
+            const formList = document.createElement('ol')
+
+            formDiv.append(form, formInput, formButton, formList)
+            recipe.comments.forEach(comment => {
+                const commentsLi = document.createElement('li')
+                commentsLi.innerText = comment.content
+                formList.append(commentsLi)
+            })
             cardElement.append(title, picture, recipeText, likesElement, likesButtonElement, formDiv)
             italianDiv.append(cardElement)
         })

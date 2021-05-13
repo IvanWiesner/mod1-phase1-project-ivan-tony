@@ -119,6 +119,7 @@ fetch(asianURL)
                     AsianId: recipe.id
                 }
 
+                console.log(comment)
                 fetch(commentsURL, {
                     method: 'POST',
                     headers: {
@@ -130,18 +131,19 @@ fetch(asianURL)
 
                 const newLi = document.createElement('li')
                 newLi.className = 'list-items'
-                newLi.innerText = newComment
+                newLi.innerText = comment.content
                 formList.append(newLi)
-
+                formInput.value = ""
             })
 
             const formList = document.createElement('ol')
 
             formDiv.append(form, formInput, formButton, formList)
-
-            const commentsLi = document.createElement('li')
-            commentsLi.innerText = recipe.comments
-            formList.append(commentsLi)
+            recipe.comments.forEach(comment => {
+                const commentsLi = document.createElement('li')
+                commentsLi.innerText = comment.content
+                formList.append(commentsLi)
+            })
             cardElement.append(title, picture, recipeText, likesElement, likesButtonElement, formDiv)
             asianDiv.append(cardElement)
         })
