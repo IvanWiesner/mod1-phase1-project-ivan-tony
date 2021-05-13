@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #e4daa3;
+    font-size: 4rem;
+    text-shadow: .25rem .5rem .25rem #1a181866;
+    padding: 0 1.5rem 0 1.5rem;
+    margin: 3rem;
+}
+
+#navbar {
+    border-radius: 0 0 .5rem .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #92a831;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    box-shadow: 0 8px 6px -6px #5a5a5a;
+}
+
+.button {
+    color: #f0de3b;
+    background-color: red;
+    font-size: larger;
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    align-items: center;
+}
+
+ul li::before {
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red;
+    /* Change the color */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: 1em;
+    /* Also needed for space (tweak if needed) */
+}
+
+.nav-menu {
+    visibility: hidden;
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #2e2d2d;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: visible;
+    width: 10rem;
+    height: 100vh;
+}
+
+.menu-button {
+    width: 4rem;
+    height: 3rem;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin-right: 2rem;
+}
+
+.menu-button.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: unset;
+    background: transparent;
+    height: 3rem;
+    visibility: visible;
+}
+
+.menu-line {
+    background: #dbd8c7;
+    border: .5px solid #dbd8c7;
+    height: 5px;
+    width: 100%;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f0de3b;
+}
+
+#logo {
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    transition: 0.70s;
+    height: 8rem;
+}
+
+#logo:hover {
+    transition: 0.70s;
+    transform: rotate(360deg);
+}
+
+a {
+    color: black;
+}
+
+.thumbsup,
+.thumbsdown {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.recipe-likes-button {
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.recipe-unlikes-button {
+    border-radius: 50%;
+    margin-left: .5rem;
+}
+
+.likes-element {
+    padding-top: 2.5rem;
+    line-height: 1.5rem;
+}
+
+.likes-button-element {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+#navbar img {
+    padding: .5rem;
+}
+
+#home-page {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 2rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    background-color: brown;
+    background-image:
+    radial-gradient(
+      circle at top left,
+      #63bdc0,
+      #acbebe,
+      #92a831 50%
+    );
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 2rem;
+}
+
+.card-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#comment-section {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    background-color: #d8e69a;
+    border-radius: .25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 8rem;
+    position: relative;
+    box-shadow: inset .1rem .1rem .5rem .1rem #000000;
+}
+
+#comment-section::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+#comment-section::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+#comment-section::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+#comment-section::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #3e3f37;
+}
+
+.comment-input {
+    padding: .5rem;
+}
+
+.comment-button {
+    background-color: #3e3f37;
+    color:#92a831;
+    font-weight: bold;
+    margin: .5rem;
+    width: 5rem;
+    height: 3rem;
+}
+
+.list-items {
+    margin: .5rem;
+}
+
+.video-div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#shef-picture {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 2rem;
+    background-color: brown;
+    background-image:
+    radial-gradient(
+      circle at center,
+      #232929,
+      #6e6e6e,
+      #3e3f37 50%
+    );
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 5rem;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    background-color: brown;
+    background-image:
+    radial-gradient(
+      circle at top left,
+      #63bdc0,
+      #acbebe,
+      #92a831 50%
+    );
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 2rem;
+}
+
+.recipe-image {
+    height: 15rem;
+    width: 20rem;
+    margin: 3rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    position: relative;
+    background-color: #63bdc0;
+    width: 100vw;
+    padding: .5rem;
+    margin-top: auto;
+    box-shadow: inset 0 0 .3rem #000000;
+}
