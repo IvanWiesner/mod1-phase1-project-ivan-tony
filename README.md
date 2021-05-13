@@ -43,7 +43,7 @@ Code Language used
 
 ---Code snipits----
 
-https://i.imgur.com/mOmTRGM.png
+<img src="https://i.imgur.com/mOmTRGM.png">
 https://i.imgur.com/9vXzZ7j.png
 
 Contact
