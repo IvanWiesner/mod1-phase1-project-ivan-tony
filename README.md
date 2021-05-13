@@ -1,34 +1,34 @@
-Cullinary Choices
+<h1>Culinary Choices</h1>
 
 Chose differenet choices for differenet types of food!
 
--Asian
--Mediterranean
--Mexican
--Italian
+Asian
+Mediterranean
+Mexican
+Italian
 
-General info for Cullinary Choices
+<h2>General info for Culinary Choices</h2>
 
 Find recipies for each of the four types we offer.
 
---add example picture--
+<img src="https://i.imgur.com/7r7OCp9.png">
 
  Click on a style of food you want to look for, see each recipie card for what we offer.
 
- --add example picture--
+<img src="https://i.imgur.com/loYdXPn.png">
 
  Can like and unlike each recipie and comment below if you want to add anything to the recipe.
 
- --add example picture---
+ <img src="https://i.imgur.com/nqUfEt5.png">
 
  Also at the bottom of the page we have our chief contributers
 
- --add example picture--
+<img src="https://i.imgur.com/vJIEZPT.png">
 
-Intro Video
+<h2>Intro Video</h2>
 --------make video once website done---------
 
-Setup
+<h2>Setup</h2>
 
 ---To run the website---
 
@@ -36,17 +36,19 @@ fork and clone the repo
 type this into your terminal
 json-server --watch db.json --routes routes.json
 
-Code Language used
--HTML
--CSS
--Javascript
+<h2>Code Language used</h2>
+HTML
+CSS
+Javascript
 
 ---Code snipits----
 
 <img src="https://i.imgur.com/mOmTRGM.png">
-https://i.imgur.com/9vXzZ7j.png
+<img src="https://i.imgur.com/9vXzZ7j.png">
 
 Contact
 
-Created by Tony Rosioli  https://www.linkedin.com/in/tony-rosciol-software-engineer
-and Ivan Wiesner www.linkedin.com/in/ivan-wiesner-3672261ba
+Created by Tony Rosioli  
+https://www.linkedin.com/in/tony-rosciol-software-engineer
+and Ivan Wiesner 
+www.linkedin.com/in/ivan-wiesner-3672261ba
